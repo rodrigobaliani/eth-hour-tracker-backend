@@ -16,19 +16,20 @@ public class Proyecto {
 	
 	private String nombre;
 	
-	@Autowired
-	private Cuenta cuenta;
+	//@Autowired
+	//private Cuenta cuenta;
 
 	public Proyecto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
+	//public Proyecto(Long id, String nombre, Cuenta cuenta) {
 	public Proyecto(Long id, String nombre, Cuenta cuenta) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		this.cuenta = cuenta;
+		//this.cuenta = cuenta;
 	}
 
 	public String getNombre() {
@@ -39,9 +40,9 @@ public class Proyecto {
 		return id;
 	}
 
-	public Cuenta getCuenta() {
+	/*public Cuenta getCuenta() {
 		return cuenta;
-	}
+	}*/
 	
 
 }

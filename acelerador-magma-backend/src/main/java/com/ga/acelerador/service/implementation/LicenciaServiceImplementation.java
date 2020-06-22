@@ -3,11 +3,13 @@ package com.ga.acelerador.service.implementation;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ga.acelerador.model.Licencia;
 import com.ga.acelerador.repository.HorasCargadasRepository;
 import com.ga.acelerador.service.LicenciaService;
 
+@Service
 public class LicenciaServiceImplementation implements LicenciaService {
 	
 	@Autowired

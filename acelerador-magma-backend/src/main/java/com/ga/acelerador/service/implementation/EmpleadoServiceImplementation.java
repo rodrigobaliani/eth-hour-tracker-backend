@@ -3,11 +3,13 @@ package com.ga.acelerador.service.implementation;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ga.acelerador.model.Empleado;
 import com.ga.acelerador.repository.EmpleadoRepository;
 import com.ga.acelerador.service.EmpleadoService;
 
+@Service
 public class EmpleadoServiceImplementation implements EmpleadoService {
 
 	@Autowired

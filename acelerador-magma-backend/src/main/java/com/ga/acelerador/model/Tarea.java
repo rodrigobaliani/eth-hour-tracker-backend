@@ -16,19 +16,20 @@ public class Tarea {
 	
 	private String nombre;
 	
-	@Autowired
-	private Proyecto proyecto;
+	/*@Autowired
+	private Proyecto proyecto;*/
 
 	public Tarea() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Tarea(Long id, String nombre, Proyecto proyecto) {
+//	public Tarea(Long id, String nombre, Proyecto proyecto) {
+	public Tarea(Long id, String nombre) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		this.proyecto = proyecto;
+		//this.proyecto = proyecto;
 	}
 
 	public Long getId() {
@@ -39,9 +40,9 @@ public class Tarea {
 		return nombre;
 	}
 
-	public Proyecto getProyecto() {
+	/*public Proyecto getProyecto() {
 		return proyecto;
-	}
+	}*/
 	
 	
 

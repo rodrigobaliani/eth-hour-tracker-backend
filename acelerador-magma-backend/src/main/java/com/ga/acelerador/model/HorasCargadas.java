@@ -16,11 +16,11 @@ public class HorasCargadas {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Autowired
+	/*@Autowired
 	private Empleado empleado;
 	
 	@Autowired
-	private Tarea tarea;
+	private Tarea tarea;*/
 	
 	private int cantidad;
 	private LocalDate fechaDesde;
@@ -31,12 +31,14 @@ public class HorasCargadas {
 		// TODO Auto-generated constructor stub
 	}
 
-	public HorasCargadas(Long id, Empleado empleado, Tarea tarea, int cantidad, LocalDate fechaDesde,
+	/*public HorasCargadas(Long id, Empleado empleado, Tarea tarea, int cantidad, LocalDate fechaDesde,
+			LocalDate fechaHasta) {*/
+	public HorasCargadas(Long id, int cantidad, LocalDate fechaDesde,
 			LocalDate fechaHasta) {
 		super();
 		this.id = id;
-		this.empleado = empleado;
-		this.tarea = tarea;
+		//this.empleado = empleado;
+		//this.tarea = tarea;
 		this.cantidad = cantidad;
 		this.fechaDesde = fechaDesde;
 		this.fechaHasta = fechaHasta;
@@ -46,13 +48,13 @@ public class HorasCargadas {
 		return id;
 	}
 
-	public Empleado getEmpleado() {
+	/*public Empleado getEmpleado() {
 		return empleado;
 	}
 
 	public Tarea getTarea() {
 		return tarea;
-	}
+	}*/
 
 	public int getCantidad() {
 		return cantidad;

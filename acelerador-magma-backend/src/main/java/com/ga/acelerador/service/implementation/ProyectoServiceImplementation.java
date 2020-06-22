@@ -3,11 +3,13 @@ package com.ga.acelerador.service.implementation;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ga.acelerador.model.Proyecto;
 import com.ga.acelerador.repository.ProyectoRepository;
 import com.ga.acelerador.service.ProyectoService;
 
+@Service
 public class ProyectoServiceImplementation implements ProyectoService {
 	
 	@Autowired

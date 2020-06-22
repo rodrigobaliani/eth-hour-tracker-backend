@@ -4,12 +4,14 @@ import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ga.acelerador.model.Empleado;
 import com.ga.acelerador.model.HorasAsignadas;
 import com.ga.acelerador.repository.HorasAsignadasRepository;
 import com.ga.acelerador.service.HorasAsignadasService;
 
+@Service
 public class HorasAsignadasServiceImplementation implements HorasAsignadasService {
 	
 	@Autowired

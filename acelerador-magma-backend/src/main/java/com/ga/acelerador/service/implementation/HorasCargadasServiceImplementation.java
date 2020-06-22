@@ -9,12 +9,14 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 
 import com.ga.acelerador.model.Empleado;
 import com.ga.acelerador.model.HorasCargadas;
 import com.ga.acelerador.repository.HorasCargadasRepository;
 import com.ga.acelerador.service.HorasCargadasService;
 
+@Service
 public class HorasCargadasServiceImplementation implements HorasCargadasService {
 
 	@Autowired

@@ -3,11 +3,13 @@ package com.ga.acelerador.service.implementation;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.ga.acelerador.model.Tarea;
 import com.ga.acelerador.repository.TareaRepository;
 import com.ga.acelerador.service.TareaService;
 
+@Service
 public class TareaServiceImplementation implements TareaService {
 	
 	@Autowired
