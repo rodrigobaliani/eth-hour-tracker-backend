@@ -15,8 +15,14 @@ public class UsuarioController {
 	private UsuarioService service;
 	
 	@GetMapping("/")
-	public String getHola() {
+	public String inicioSistema() {
 		return "Inició piola";
 	}
+	
+	@GetMapping("/hola")
+	public String getHola() {
+		return "Hola";
+	}
+
 
 }
