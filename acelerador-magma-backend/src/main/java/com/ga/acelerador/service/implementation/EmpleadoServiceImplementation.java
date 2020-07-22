@@ -24,7 +24,8 @@ public class EmpleadoServiceImplementation implements EmpleadoService {
 	@Override
 	public List<Empleado> getAll() {
 		// TODO Auto-generated method stub
-		return null;
+		List<Empleado> empleados = repository.findAll();
+		return empleados;
 	}
 
 	@Override
@@ -44,5 +45,8 @@ public class EmpleadoServiceImplementation implements EmpleadoService {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	
+	public int contarEmpleados () {
+		return getAll().size();
+	}
 }
