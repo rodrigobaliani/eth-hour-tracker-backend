@@ -11,5 +11,5 @@ public interface EmpleadoService {
 	Empleado save(Empleado request);
 	Empleado update(Long id, Empleado request);
 	Empleado delete(Long id);
-
+	int contarEmpleados();
 }
