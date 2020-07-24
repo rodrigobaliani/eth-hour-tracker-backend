@@ -33,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	public void configure(AuthenticationManagerBuilder builder) throws Exception {
-		builder.authenticationProvider(getProvider()).userDetailsService(userDetailsService());
+		builder.authenticationProvider(getProvider());
 	}
 
 	@Override

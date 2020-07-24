@@ -1,8 +1,11 @@
 package com.ga.acelerador;
 
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -10,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -45,9 +49,11 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         try {
             AuthenticationRequest user = new ObjectMapper().readValue(request.getInputStream(),
                     AuthenticationRequest.class);
+			byte[] decodedBytes = Base64.getUrlDecoder().decode(user.getPassword());
+			String decodedPassword = new String(decodedBytes);
  
             return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(),
-                    user.getPassword(), new ArrayList<>()));
+            		decodedPassword, new ArrayList<>()));
  
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -86,13 +92,25 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response,
             AuthenticationException failed) throws IOException, ServletException {
  
-        super.unsuccessfulAuthentication(request, response, failed);
+        List<String> details = new ArrayList<String>();
+        String message = "Usuario o password invalidos";
+       
+        ErrorResponse errorResponse = new ErrorResponse(message, details , HttpStatus.UNAUTHORIZED);
+        response.setStatus(HttpStatus.UNAUTHORIZED.value());
+        
+        OutputStream out = response.getOutputStream();
+       
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writeValue(out, errorResponse);
+       
+        out.flush();
     }
  
     @Override
     public void setAuthenticationFailureHandler(AuthenticationFailureHandler failureHandler) {
  
         super.setAuthenticationFailureHandler(failureHandler);
+        
     }
 
 }
