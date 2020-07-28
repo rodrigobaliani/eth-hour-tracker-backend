@@ -46,7 +46,7 @@ public class EmpleadoServiceImplementation implements EmpleadoService {
 		return null;
 	}
 	
-	public int contarEmpleados () {
-		return getAll().size();
+	public long contarEmpleados () {
+		return repository.count();
 	}
 }
