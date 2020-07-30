@@ -1,4 +1,4 @@
-package com.ga.acelerador;
+package com.ga.acelerador.security;
 
 import java.util.Arrays;
 
@@ -19,7 +19,9 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import com.ga.acelerador.Constants.Parameter;
+import com.ga.acelerador.security.jwt.JWTAuthenticationFilter;
+import com.ga.acelerador.security.jwt.JWTAuthorizationFilter;
+import com.ga.acelerador.util.Constants.Parameter;
 
 @Configuration
 @EnableWebSecurity

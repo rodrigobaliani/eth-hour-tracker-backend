@@ -1,4 +1,4 @@
-package com.ga.acelerador;
+package com.ga.acelerador.security.jwt;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -27,6 +27,11 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ga.acelerador.ErrorResponse;
+import com.ga.acelerador.security.AuthenticationRequest;
+import com.ga.acelerador.util.Constants;
+import com.ga.acelerador.util.Constants.Parameter;
+import com.ga.acelerador.util.Constants.SecurityConstants;
 
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter{
 	

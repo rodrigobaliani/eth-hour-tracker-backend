@@ -1,4 +1,4 @@
-package com.ga.acelerador;
+package com.ga.acelerador.security;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -15,6 +15,7 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ga.acelerador.ErrorResponse;
 
 @Component
 public class authenticationEntryPoint implements AuthenticationEntryPoint  {

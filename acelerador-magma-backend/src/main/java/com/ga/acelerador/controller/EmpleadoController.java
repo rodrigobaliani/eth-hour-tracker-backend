@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
 
 import com.ga.acelerador.service.EmpleadoService;
-import com.ga.acelerador.Constants;
+import com.ga.acelerador.util.Constants;
 import com.ga.acelerador.model.Empleado;
 
 @RestController
