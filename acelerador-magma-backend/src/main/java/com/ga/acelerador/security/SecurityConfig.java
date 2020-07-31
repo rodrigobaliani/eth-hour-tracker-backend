@@ -15,6 +15,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.ldap.authentication.ad.ActiveDirectoryLdapAuthenticationProvider;
+import org.springframework.security.ldap.userdetails.UserDetailsContextMapper;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -22,6 +23,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import com.ga.acelerador.security.jwt.JWTAuthenticationFilter;
 import com.ga.acelerador.security.jwt.JWTAuthorizationFilter;
 import com.ga.acelerador.util.Constants.Parameter;
+import com.ga.acelerador.security.CustomUserDetailsContextMapper;
 
 @Configuration
 @EnableWebSecurity
@@ -62,6 +64,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		provider.setConvertSubErrorCodesToExceptions(true);
 		provider.setUseAuthenticationRequestCredentials(true);
 		provider.setSearchFilter("(&(mail={0})(objectclass=user))");
+		provider.setUserDetailsContextMapper(userDetailsContextMapper());
 		return provider;
 		
 	}
@@ -91,6 +94,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	public AuthenticationManager getAuthManager() {
 		return new ProviderManager(Arrays.asList(getProvider()));
 	}
+	
+    @Bean
+    public UserDetailsContextMapper userDetailsContextMapper() {
+        return new CustomUserDetailsContextMapper();
+    }
 	
 	
 
