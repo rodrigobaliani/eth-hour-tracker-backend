@@ -1,4 +1,4 @@
-package com.ga.acelerador;
+package com.ga.acelerador.security;
 
 public class AuthenticationRequest {
 	

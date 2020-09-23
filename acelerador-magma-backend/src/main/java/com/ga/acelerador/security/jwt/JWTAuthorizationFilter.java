@@ -1,4 +1,4 @@
-package com.ga.acelerador;
+package com.ga.acelerador.security.jwt;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,6 +18,8 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import com.ga.acelerador.util.Constants;
+import com.ga.acelerador.util.Constants.SecurityConstants;
 
 public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
 	

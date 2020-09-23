@@ -1,4 +1,4 @@
-package com.ga.acelerador;
+package com.ga.acelerador.util;
 
 public class Constants {
 	

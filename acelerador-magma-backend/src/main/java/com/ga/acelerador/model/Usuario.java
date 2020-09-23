@@ -20,9 +20,8 @@ public class Usuario {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Usuario(Long id, String mail, boolean activo) {
+	public Usuario(String mail, boolean activo) {
 		super();
-		this.id = id;
 		this.mail = mail;
 		this.activo = activo;
 	}
