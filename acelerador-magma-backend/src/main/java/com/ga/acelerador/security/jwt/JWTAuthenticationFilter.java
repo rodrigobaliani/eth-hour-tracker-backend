@@ -55,11 +55,11 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
             AuthenticationRequest user = new ObjectMapper().readValue(request.getInputStream(),
                     AuthenticationRequest.class);
 			// Password con encriptacion - Utilizar para pruebas con frontend
-            byte[] decodedBytes = Base64.getUrlDecoder().decode(user.getPassword());
-			String decodedPassword = new String(decodedBytes);
+       //     byte[] decodedBytes = Base64.getUrlDecoder().decode(user.getPassword());
+		//	String decodedPassword = new String(decodedBytes);
 			
 			// Password sin encriptacion - Utilizar para pruebas con postman
-			//String decodedPassword = user.getPassword();
+			String decodedPassword = user.getPassword();
  
             return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(),
             		decodedPassword, new ArrayList<>()));
