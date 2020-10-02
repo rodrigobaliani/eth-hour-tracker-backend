@@ -1,0 +1,20 @@
+package com.ga.accelerator.dto.request;
+
+import com.ga.accelerator.dto.request.AbstractEntityRequest;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class CollaboratorRequest extends AbstractEntityRequest  {
+	private String file;
+	private String mail;
+	private String name;
+	private String rolee;
+	private String workload;
+}
