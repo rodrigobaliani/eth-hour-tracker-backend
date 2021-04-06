@@ -12,14 +12,6 @@ public class AbstractEntityResponse {
 
 	private Long id;
 
-	public AbstractEntityResponse(Long id) {
-		super();
-		this.id = id;
-	}
-
-	public AbstractEntityResponse() {
-		super();
-	}
 
 	public Long getId() {
 		return id;

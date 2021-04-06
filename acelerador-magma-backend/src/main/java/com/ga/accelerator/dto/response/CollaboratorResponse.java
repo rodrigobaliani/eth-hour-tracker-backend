@@ -6,15 +6,15 @@ public class CollaboratorResponse extends AbstractEntityResponse{
 	private String file;
 	private String mail;
 	private String name;
-	private String rolee;
+	private String role;
 	private String workload;
 	
-	public CollaboratorResponse(Long id, String file, String mail, String name, String rolee, String workload) {
+	public CollaboratorResponse(Long id, String file, String mail, String name, String role, String workload) {
 		super(id);
 		this.file = file;
 		this.mail = mail;
 		this.name = name;
-		this.rolee = rolee;
+		this.role = role;
 		this.workload = workload;
 	}
 	public CollaboratorResponse() {
@@ -38,11 +38,11 @@ public class CollaboratorResponse extends AbstractEntityResponse{
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getrolee() {
-		return rolee;
+	public String getRole() {
+		return role;
 	}
-	public void setrolee(String rolee) {
-		this.rolee = rolee;
+	public void setRole(String role) {
+		this.role = role;
 	}
 	public String getWorkload() {
 		return workload;

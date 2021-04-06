@@ -1,6 +1,6 @@
 package com.ga.accelerator.security.jwt;
 
-import java.io.IOException;
+/*import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.servlet.FilterChain;
@@ -69,4 +69,4 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
         return null;
     }
 
-}
+}*/

@@ -1,6 +1,6 @@
 package com.ga.accelerator.security;
 
-public class AuthenticationRequest {
+/*public class AuthenticationRequest {
 	
     private String username;
     private String password;
@@ -29,4 +29,4 @@ public class AuthenticationRequest {
         this.password = password;
     }
 
-}
+}*/

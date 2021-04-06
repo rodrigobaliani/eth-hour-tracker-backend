@@ -15,6 +15,6 @@ public class CollaboratorRequest extends AbstractEntityRequest  {
 	private String file;
 	private String mail;
 	private String name;
-	private String rolee;
+	private String role;
 	private String workload;
 }
