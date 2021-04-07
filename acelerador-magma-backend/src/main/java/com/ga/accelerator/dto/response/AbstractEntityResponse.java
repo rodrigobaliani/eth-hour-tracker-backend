@@ -21,6 +21,10 @@ public class AbstractEntityResponse {
 		this.id = id;
 	}
 	
-	
+	/*public AbstractEntityResponse(Long id) {
+		this.id = id;
+	}
+	public AbstractEntityResponse() {
+	}*/
 
 }
