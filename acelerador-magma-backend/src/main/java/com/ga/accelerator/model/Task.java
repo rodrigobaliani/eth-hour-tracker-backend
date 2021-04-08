@@ -22,6 +22,6 @@ public class Task {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;	
 	private String name;
-	private Project project;
+	//private Project project;
 
 }

@@ -23,8 +23,8 @@ public class LoadedHours {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private Employee employee;
-	private Task task;
+	//private Employee employee;
+	//private Task task;
 	private int quantity;
 	private LocalDate dateFrom;
 	private LocalDate dateTo;

@@ -1,7 +1,5 @@
 package com.ga.accelerator.dto.response;
 
-
-
 public class CollaboratorResponse extends AbstractEntityResponse{
 	private String file;
 	private String mail;

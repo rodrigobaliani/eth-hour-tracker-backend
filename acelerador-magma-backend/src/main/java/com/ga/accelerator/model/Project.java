@@ -21,7 +21,7 @@ public class Project {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;	
 	private String name;
-	private GlowContract glowContract;
+	//private GlowContract glowContract;
 
 
 

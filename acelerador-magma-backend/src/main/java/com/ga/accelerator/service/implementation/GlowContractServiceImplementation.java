@@ -5,42 +5,42 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.ga.accelerator.model.Licence;
-import com.ga.accelerator.repository.LoadedHoursRepository;
-import com.ga.accelerator.service.LicenseService;
+import com.ga.accelerator.model.GlowContract;
+import com.ga.accelerator.repository.GlowContractRepository;
+import com.ga.accelerator.service.GlowContractService;
 
 @Service
-public class LicenciaServiceImplementation implements LicenseService {
+public class GlowContractServiceImplementation implements GlowContractService {
 	
 	@Autowired
-	private LoadedHoursRepository repository;
-
+	private GlowContractRepository repository;
+	
 	@Override
-	public Licence get(Long id) {
+	public GlowContract get(Long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Licence> getAll() {
+	public List<GlowContract> getAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Licence save(Licence request) {
+	public GlowContract save(GlowContract request) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Licence update(Long id, Licence request) {
+	public GlowContract update(Long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Licence delete(Long id) {
+	public GlowContract delete(Long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
