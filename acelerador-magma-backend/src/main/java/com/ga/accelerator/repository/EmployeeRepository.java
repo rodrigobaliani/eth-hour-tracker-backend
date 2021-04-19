@@ -7,5 +7,5 @@ import com.ga.accelerator.model.Employee;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long>{
-
+	public Employee findByName(String name);
 }

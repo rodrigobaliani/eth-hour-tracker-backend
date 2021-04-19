@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.hibernate.annotations.Where;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,11 +17,11 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class GlowContract {
+@Where(clause = "deleted = false")
+public class GlowContract extends AbstractEntity{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;	
 	private String name;
 	private String description;
 
