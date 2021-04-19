@@ -2,13 +2,14 @@ package com.ga.accelerator.service;
 
 import java.util.List;
 
-import com.ga.accelerator.model.GlowContract;
+import com.ga.accelerator.dto.request.GlowContractRequest;
+import com.ga.accelerator.dto.response.GlowContractResponse;
 
 public interface GlowContractService {
 	
-	GlowContract get(Long id);
-	List<GlowContract> getAll();
-	GlowContract save(GlowContract request);
-	GlowContract update(Long id);
-	GlowContract delete(Long id);
+	GlowContractResponse get(Long id);
+	List<GlowContractResponse> getAll();
+	GlowContractResponse save(GlowContractRequest request);
+	GlowContractResponse update(Long id, GlowContractRequest request);
+	GlowContractResponse delete(Long id);
 }

@@ -6,7 +6,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Table(name = "user_account")
 public class User {
 	
@@ -16,33 +25,6 @@ public class User {
 	
 	private String mail;
 	private boolean active;
-	
-	public User() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
-	public User(String mail, boolean active) {
-		super();
-		this.mail = mail;
-		this.active = active;
-	}
-
-	public String getMail() {
-		return mail;
-	}
-	public void setMail(String mail) {
-		this.mail = mail;
-	}
-	public boolean isActive() {
-		return active;
-	}
-	public void setActive(boolean active) {
-		this.active = active;
-	}
-	public Long getId() {
-		return id;
-	}
 	
 	
 

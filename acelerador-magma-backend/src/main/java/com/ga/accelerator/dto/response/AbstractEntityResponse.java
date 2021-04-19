@@ -12,9 +12,12 @@ public class AbstractEntityResponse {
 
 	private Long id;
 
-public AbstractEntityResponse(Long id) {
-	this.id = id;
-}
-public AbstractEntityResponse() {
-}
+	public AbstractEntityResponse(Long id) {
+		this.id = id;
+	}
+	
+	public AbstractEntityResponse() {
+		
+	}
+	
 }

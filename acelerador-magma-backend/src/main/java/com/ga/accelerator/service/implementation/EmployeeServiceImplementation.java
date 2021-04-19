@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.ga.accelerator.dto.request.CollaboratorRequest;
-import com.ga.accelerator.dto.response.CollaboratorResponse;
+import com.ga.accelerator.dto.request.EmployeeRequest;
+import com.ga.accelerator.dto.response.EmployeeResponse;
 import com.ga.accelerator.model.Employee;
 import com.ga.accelerator.repository.EmployeeRepository;
 import com.ga.accelerator.service.EmployeeService;
@@ -26,12 +26,12 @@ public class EmployeeServiceImplementation implements EmployeeService {
 	private ModelMapper modelMapper;
 	
 	
-	public CollaboratorResponse get(Long id) {
-		CollaboratorResponse response = null;
+	public EmployeeResponse get(Long id) {
+		EmployeeResponse response = null;
 	
 			Employee collaborator = repository.findById(id).get();
 
-			response = modelMapper.map(collaborator, CollaboratorResponse.class);
+			response = modelMapper.map(collaborator, EmployeeResponse.class);
 
 	System.out.println(response.getName());
 
@@ -40,48 +40,48 @@ public class EmployeeServiceImplementation implements EmployeeService {
 	}
 
 
-	public List<CollaboratorResponse> getAll() {
+	public List<EmployeeResponse> getAll() {
 		
-		List<CollaboratorResponse> response = new ArrayList<>();
+		List<EmployeeResponse> response = new ArrayList<>();
 		List<Employee> collaborators = repository.findAll(Sort.by(Sort.Direction.ASC, "name"));
 		
 		response = collaborators.stream()
-				.map(collaborator -> modelMapper.map(collaborator, CollaboratorResponse.class))
+				.map(collaborator -> modelMapper.map(collaborator, EmployeeResponse.class))
 				.collect(Collectors.toList());
 		return response;
 	}
 
 	
-	public CollaboratorResponse save(CollaboratorRequest request) {
-		CollaboratorResponse response = null;
+	public EmployeeResponse save(EmployeeRequest request) {
+		EmployeeResponse response = null;
 
 	
 			Employee collaborator = modelMapper.map(request, Employee.class);
 
 			repository.save(collaborator);
 
-			response = modelMapper.map(collaborator, CollaboratorResponse.class);
+			response = modelMapper.map(collaborator, EmployeeResponse.class);
 
 
 		return response;
 	}
 
 	
-	public CollaboratorResponse update(Long id, CollaboratorRequest request) {
-		CollaboratorResponse response = null;
+	public EmployeeResponse update(Long id, EmployeeRequest request) {
+		EmployeeResponse response = null;
 
 			Employee collaborator = this.repository.findById(id).get();
 			collaborator = this.modelMapper.map(request, Employee.class);
 
 			repository.save(collaborator);
 
-			response = modelMapper.map(collaborator, CollaboratorResponse.class);
+			response = modelMapper.map(collaborator, EmployeeResponse.class);
 		return response;
 	}
 
 
 	
-	public CollaboratorResponse delete(Long id) {
+	public EmployeeResponse delete(Long id) {
 	//CollaboratorResponse response = new CollaboratorResponse();
 
 			Employee collaborator = repository.findById(id).get();

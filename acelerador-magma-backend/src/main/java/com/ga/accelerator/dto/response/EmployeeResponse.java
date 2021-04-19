@@ -1,13 +1,13 @@
 package com.ga.accelerator.dto.response;
 
-public class CollaboratorResponse extends AbstractEntityResponse{
+public class EmployeeResponse extends AbstractEntityResponse{
 	private String file;
 	private String mail;
 	private String name;
 	private String role;
 	private String workload;
 	
-	public CollaboratorResponse(Long id, String file, String mail, String name, String role, String workload) {
+	public EmployeeResponse(Long id, String file, String mail, String name, String role, String workload) {
 		super(id);
 		this.file = file;
 		this.mail = mail;
@@ -15,7 +15,7 @@ public class CollaboratorResponse extends AbstractEntityResponse{
 		this.role = role;
 		this.workload = workload;
 	}
-	public CollaboratorResponse() {
+	public EmployeeResponse() {
 		
 	}
 	public String getFile() {

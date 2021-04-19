@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
 
-import com.ga.accelerator.dto.request.CollaboratorRequest;
-import com.ga.accelerator.dto.response.CollaboratorResponse;
+import com.ga.accelerator.dto.request.EmployeeRequest;
+import com.ga.accelerator.dto.response.EmployeeResponse;
 import com.ga.accelerator.model.Employee;
 import com.ga.accelerator.service.implementation.EmployeeServiceImplementation;
 import com.ga.accelerator.util.Constants;
@@ -28,34 +28,34 @@ public class EmployeeController {
 	private final String entryPoint = Constants.Parameter.API_URL_SUFFIX;
 	
 	@GetMapping(entryPoint+"/employee/get")
-	public ResponseEntity <List<CollaboratorResponse>> getAll(){
-		List<CollaboratorResponse> collaborators = service.getAll();
+	public ResponseEntity <List<EmployeeResponse>> getAll(){
+		List<EmployeeResponse> collaborators = service.getAll();
 		
 		return ResponseEntity.ok().body(collaborators);
 	}
 	@GetMapping(entryPoint+"/employee/getByID/{id}")
-	public ResponseEntity<CollaboratorResponse> get(@PathVariable Long id){
-		CollaboratorResponse response =  service.get(id);
+	public ResponseEntity<EmployeeResponse> get(@PathVariable Long id){
+		EmployeeResponse response =  service.get(id);
 		
 		return ResponseEntity.ok(response);
 	}
 	@PostMapping("/employee/save")
-	public ResponseEntity<CollaboratorResponse> save(@RequestBody CollaboratorRequest request) {
-		CollaboratorResponse response = service.save(request);
+	public ResponseEntity<EmployeeResponse> save(@RequestBody EmployeeRequest request) {
+		EmployeeResponse response = service.save(request);
 		
 		return ResponseEntity.ok(response);
 	}
 	
 	@PutMapping("/employee/{id}")
-	public ResponseEntity<CollaboratorResponse> update(@PathVariable Long id, @RequestBody CollaboratorRequest request) {
-		CollaboratorResponse response = service.update(id, request);
+	public ResponseEntity<EmployeeResponse> update(@PathVariable Long id, @RequestBody EmployeeRequest request) {
+		EmployeeResponse response = service.update(id, request);
 		
 		return ResponseEntity.ok(response);
 	}
 	
 	@DeleteMapping("/employee/{id}")
-	public ResponseEntity<CollaboratorResponse> delete(@PathVariable Long id) {
-		CollaboratorResponse response = service.delete(id);
+	public ResponseEntity<EmployeeResponse> delete(@PathVariable Long id) {
+		EmployeeResponse response = service.delete(id);
 		
 		return ResponseEntity.ok(response);
 	}

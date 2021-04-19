@@ -2,16 +2,16 @@ package com.ga.accelerator.service;
 
 import java.util.List;
 
-import com.ga.accelerator.dto.request.CollaboratorRequest;
-import com.ga.accelerator.dto.response.CollaboratorResponse;
+import com.ga.accelerator.dto.request.EmployeeRequest;
+import com.ga.accelerator.dto.response.EmployeeResponse;
 
 
 public interface EmployeeService {
 	
-	CollaboratorResponse get(Long id);
-	List<CollaboratorResponse> getAll();
-	CollaboratorResponse save(CollaboratorRequest request);
-	CollaboratorResponse update(Long id, CollaboratorRequest request);
-	CollaboratorResponse delete(Long id);
+	EmployeeResponse get(Long id);
+	List<EmployeeResponse> getAll();
+	EmployeeResponse save(EmployeeRequest request);
+	EmployeeResponse update(Long id, EmployeeRequest request);
+	EmployeeResponse delete(Long id);
 	long countEmployees();
 }

@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CollaboratorRequest extends AbstractEntityRequest  {
+public class EmployeeRequest extends AbstractEntityRequest  {
 	private String file;
 	private String mail;
 	private String name;
