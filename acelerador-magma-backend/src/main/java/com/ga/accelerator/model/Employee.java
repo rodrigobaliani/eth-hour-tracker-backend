@@ -15,11 +15,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Employee {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+public class Employee extends AbstractEntity {
 	
 	private String file;
 	private String mail;

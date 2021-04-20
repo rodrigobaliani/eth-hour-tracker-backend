@@ -14,11 +14,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class GlowContract {
+public class GlowContract extends AbstractEntity {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;	
+	
 	private String name;
 	private String description;
 
