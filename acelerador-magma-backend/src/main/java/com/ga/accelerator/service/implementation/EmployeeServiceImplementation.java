@@ -16,7 +16,6 @@ import com.ga.accelerator.model.Employee;
 import com.ga.accelerator.repository.EmployeeRepository;
 import com.ga.accelerator.service.EmployeeService;
 
-
 import org.modelmapper.ModelMapper;
 @Service
 public class EmployeeServiceImplementation implements EmployeeService {
@@ -83,21 +82,17 @@ public class EmployeeServiceImplementation implements EmployeeService {
 
 	
 	public EmployeeResponse delete(Long id) {
-		EmployeeResponse response = null;
+	//CollaboratorResponse response = new CollaboratorResponse();
 
-		try {
-			Employee employee = repository.findById(id).get();
+			Employee collaborator = repository.findById(id).get();
 
-			employee.setDeleted();
-			this.repository.save(employee);
+			//collaborator.setDeleted();
 
-			response = modelMapper.map(employee, EmployeeResponse.class);
+			this.repository.save(collaborator);
 
-		} catch (Exception e) {
-			//throw new DeleteMethodException("The employee with id: " + id + "can not be deleted");			
-		}
-
-		return response;
+			//response = modelMapper.map(collaborator, CollaboratorResponse.class);
+		//return response;
+			return null;
 	}
 	
 	public long countEmployees () {

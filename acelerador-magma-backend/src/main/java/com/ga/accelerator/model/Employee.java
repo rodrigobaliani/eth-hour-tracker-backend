@@ -4,10 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.EntityListeners;
-import javax.persistence.MappedSuperclass;
-import org.hibernate.annotations.Where;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,17 +15,16 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-@Where(clause = "deleted = false")
-public class Employee extends AbstractEntity {
+public class Employee {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-
+	private Long id;
+	
 	private String file;
 	private String mail;
 	private String name;
 	private String role;
 	private String workload;
 	
-
 }
